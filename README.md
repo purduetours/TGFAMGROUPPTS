@@ -1,6 +1,6 @@
 # Family Points on Cloudflare Pages + Supabase
 
-This version keeps the existing `tgfamgrouppts` Pages site and stores new completed special-request credits in your existing **hosted** Supabase project. It does not need D1, the full TGIS server, or a local database. The live TGIS sheet still supplies pickup records and any special requests already recorded there.
+This version keeps the existing `tgfamgrouppoints` Pages site and stores new completed special-request credits in your existing **hosted** Supabase project. It does not need D1, the full TGIS server, or a local database. The live TGIS sheet still supplies pickup records and any special requests already recorded there.
 
 1. In the **Supabase SQL Editor** for the hosted project you already use, run [the included migration](migrations/0001_family_dashboard_credits.sql). It creates only `public.tgis_family_dashboard_credits`. Anonymous and authenticated Data API roles cannot access this table. The dashboard uses the Data API for this table, so it must be available through the project's exposed `public` schema.
 2. The existing hosted project URL and workbook ID are already set in `wrangler.json`. In Cloudflare Pages **Settings → Variables and Secrets**, add just these **Production runtime secrets**:
