@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Live TGIS family standings and tour pickup leaders">
+<title>TGIS Family Points</title>
+<link rel="stylesheet" href="/dashboard.css">
+<script src="/dashboard.js" defer></script>
+</head>
+<body>
+<main>
+<header>
+<div><p class="eyebrow">PURDUE TOUR GUIDES · TGIS</p><h1>Family Points</h1><p id="semester">Current standings and pickup leaders</p></div>
+<button id="refresh" type="button">Refresh standings</button>
+</header>
+<p id="status" role="status">Loading live standings…</p>
+<section aria-labelledby="standings-title">
+<h2 id="standings-title">Standings</h2>
+<div id="standings" class="standings"></div>
+</section>
+<section aria-labelledby="leaders-title">
+<h2 id="leaders-title">Pickup leaders by family</h2>
+<p>Includes guides with a pickup or special request. Pickups later marked Not Given still count.</p>
+<div id="leaders" class="leaders"></div>
+</section>
+<section class="card" aria-labelledby="credit-title">
+<h2 id="credit-title">Add a completed special request</h2>
+<p>Each request adds 4 points to the guide’s family. Enter only requests that haven’t already been recorded in the TGIS sheet.</p>
+<form id="credit-form">
+<label>Guide <select name="guideId" id="guide" required><option value="">Loading guides…</option></select></label>
+<label>Date given <input name="date" id="credit-date" type="date" required></label>
+<label>Requests given <input name="units" type="number" value="1" min="1" max="20" required></label>
+<label class="note">Note <input name="note" maxlength="200" placeholder="Optional"></label>
+<button id="save" type="submit" disabled>Add special request</button>
+</form>
+<p id="credit-status" role="status"></p>
+</section>
+<section aria-labelledby="feed-title">
+<h2 id="feed-title">Live activity feed</h2>
+<p>Completed special requests from TGIS and this dashboard.</p>
+<ol id="feed" class="feed"></ol>
+</section>
+<footer>Includes live sheet totals and requests entered here. Adjustments saved only in the full TGIS app aren’t included.</footer>
+</main>
+</body>
+</html>

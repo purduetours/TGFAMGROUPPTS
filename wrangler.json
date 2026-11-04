@@ -1,0 +1,9 @@
+{
+  "name": "tgfamgrouppts",
+  "pages_build_output_dir": "./dist",
+  "compatibility_date": "2026-10-27",
+  "vars": {
+    "SUPABASE_URL": "https://ngboeuxjhthacdavkimc.supabase.co",
+    "TGIS_WORKBOOK_ID": "15Hq5veHVvxfgFNm4pRtxUZYfw1RhgG04le2RuCCCubY"
+  }
+}
